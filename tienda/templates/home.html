@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+  .tituloproduc{
+    color: rgb(187, 179, 235);
+    margin: 3%;
+  }
+</style>
+
+<div class="d-flex justify-content-center caja contenedor2" >
+  <div class="container text-center caja login-container contenedor2">
+    <h1 class="display-4 mb-4">¡Bienvenido a la mejor tienda para tus mascotas!</h1>
+    <p class="lead text-justify letra">
+      En nuestra tienda encontrarás todo lo que necesitas para consentir a tus mascotas con productos de la más alta calidad. Desde alimentos balanceados hasta juguetes divertidos, estamos aquí para hacer la vida de tus amigos peludos más saludable y feliz.
+    </p>
+    <hr>
+    <div class="row mt-4 contenedor2 ">
+      <h2 class="tituloproduc">Nuestros productos</h2>
+      {% for product in products %}
+      <div class="col-md-4 mb-4 contenedor2">
+        <div class="card contenedor2">
+          <div class="card-body contenedor2">
+            <img src="{{ product.image.url }}" class="card-img-top imagen" alt="{{ product.title }}">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text">Precio: ${{ product.price }}</p>
+            <a href="" class="btn btn-primary">comprar</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include 'sobrefooter.html' %}
+{% endblock %}
+
+

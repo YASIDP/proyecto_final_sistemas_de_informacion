@@ -1,0 +1,45 @@
+<div class="row border alto3">
+    <div class="col border alto3">
+        <p class="letra">Yasid Alejandro Berbesi Prada </p>
+        <p class="letra">yasidprada@mail.com</p>
+        <p class="letra">30025744579</p>
+    </div>
+    <div class="col border alto3">
+        <a class="letra2" href="https://www.instagram.com/yasidberbesiprada?igsh=MW9qM25zeDU1aWhyNw==" target="_blank">instagram</a><br>
+        <a class="letra2 " href="https://www.facebook.com/yasidalejandro.berbesiprada?mibextid=ZbWKwL"target="_blank">facebook</a>
+    </div>
+    <div class="col border alto3">
+        <h2>Formulario de Contacto</h2>
+        <form  id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+    
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+    
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    
+            <input type="submit" value="Enviar">
+        </form>
+
+
+    </div>
+</div>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+        // Obtener los valores de los campos del formulario
+        var nombre = document.getElementById("nombre").value;
+        var telefono = document.getElementById("telefono").value;
+        var correo = document.getElementById("correo").value;
+
+        // Mostrar la alerta con los datos del usuario
+        alert("Apreciado " + nombre + ", hemos recibido su mensaje. Nos comunicaremos al teléfono " + telefono + " o dirección de email " + correo + " en los próximos días.");
+    });
+</script>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django CRUD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+        body{
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/013/796/791/small/seamless-beagle-pattern-cartoon-home-pet-set-of-cute-puppies-for-print-posters-and-postcard-beagle-animal-background-funny-little-doggy-seamless-pattern-vector.jpg");
+        }
+  
+        div{
+            display: inline-block;
+            background-color: rgba(130, 132, 141, 0.425);
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+      }
+      label {
+          display: block;
+          margin-bottom: 10px;
+      }
+        .caja{
+      margin: 20px;
+    }
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s ease;
+  }
+  form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  form button:hover {
+    background-color: rgb(80, 177, 0);
+  }
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  .row {
+  margin-bottom: 15px;
+}
+
+.border {
+  border: 1px solid #ccc;
+}
+
+.alto2 {
+  height: 200px; /* Ajustar según necesidad */
+}
+
+/* Estilos específicos para la sección de productos */
+.col-10 {
+  background-color: #f0f5ff;
+  padding: 10px;
+}
+
+.col-10 h1 {
+  color: #3a7bd5;
+}
+
+.col-10 ul {
+  list-style-type: none;
+}
+
+.col-10 li {
+  background-color: #d6e4ff;
+  padding: 10px;
+}
+
+.col-10 a {
+  text-decoration: none;
+  color: #1a478d;
+}
+
+.col-10 strong {
+  font-weight: bold;
+  color: #1a478d;
+}
+
+.col-10 p {
+  color: #333;
+}
+div{
+  display: inline-block;
+}
+.centrar {
+  margin: 5%;
+          
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+          background-color: rgb(0, 143, 209);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+          background-color: rgb(137, 0, 201);
+        }
+  .imagen{
+          height: 345px;
+          width: 345px;
+        }
+        
+    #divdav{
+        background-color: rgba(240, 248, 255, 0);
+    }
+    .lupe{
+        background-color: rgba(240, 248, 255, 0);
+    }
+    h1 {
+      color: #c4d8ff;
+    }
+    .letra{
+      color: #f0f5ff;
+    }
+    .letra2{
+      color: #041230;
+    }
+    .fondodiv{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    
+  .form-container form {
+      display: flex;
+      flex-direction: column;
+      padding: 2%;
+  }
+
+  .form-container label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333333;
+  }
+
+  .form-container input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+
+  .form-container button {
+      padding: 10px;
+      background-color: rgb(0, 143, 209);
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+
+  .form-container button:hover {
+      background-color: rgb(137, 0, 201);
+  }
+
+  .form-container p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666666;
+  }
+
+  .form-container p a {
+      color: rgb(121, 12, 69);
+      text-decoration: none;
+  }
+
+  .form-container p a:hover {
+      text-decoration: underline;
+  }
+
+.caja{
+  padding: 2%;
+}
+nav{
+        background-color: rgba(105, 105, 105, 0.473);
+        margin: 2%;
+    }
+    .contenedor2 {
+            display: inline-block;
+        }
+
+
+
+
+  </style>
+  </head>
+  <body>
+    {% include '_navbar.html' %}
+    
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

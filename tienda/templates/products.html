@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row border d-flex justify-content-center caja">
+  <div class="col-10 border "> 
+    <h1>Products</h1>
+      <ul>
+        {% for product in products %}
+        <div class="row border d-flex justify-content-center caja">
+          <li>
+            <img src="{{ product.image.url }}" alt="{{ product.title }}" class="imagen"><br>
+
+            <a href="{% url 'product_detail' product.id %}">
+              <strong>{{ product.title }}</strong>
+              <p>{{ product.description }}</p>
+              <p>${{ product.price }}</p>
+            </a>
+          </li>
+        </div><br>
+        {% endfor %}
+      </ul>
+  </div>
+</div><br>
+{% endblock %}
+
